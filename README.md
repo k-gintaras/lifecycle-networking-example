@@ -8,7 +8,7 @@ And a blog I wrote for this problem that I struggled for very long.
 
 http://androidubaby.blogspot.co.uk/2017/12/android-lifecycle-and-networking.html
 
-all the classes except activity would ideally be placed in lets say "networkapi" package
-example activity uses those classes
-fix your imports, because classes have example import
-rename your classes and modify your JSON POJO's
+all the classes except activity would ideally be placed in lets say "networkapi" package,
+example activity uses those classes,
+fix your imports, because classes have example import,
+rename your classes and modify your JSON POJO's.
