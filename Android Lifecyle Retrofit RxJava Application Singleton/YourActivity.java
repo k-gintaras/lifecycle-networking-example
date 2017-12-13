@@ -19,11 +19,11 @@ public class YourActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
-		/*
-		 *	 remove previous responses and allow new requests, i.e. when you return to main activity
-		 *	 service.clearCache();
-		 */
+	setContentView(R.layout.activity_main);
+	/*
+	 *	 remove previous responses and allow new requests, i.e. when you return to main activity
+	 *	 service.clearCache();
+	 */
 
         //initiate networking classes
         RxApplication app = (RxApplication) getApplication();
@@ -34,10 +34,10 @@ public class YourActivity extends AppCompatActivity {
         String request = getRequestMessage();
 
         //start networking
-        Observable<WhyWhenResponseObject> unpreparedObservable = api.getWhyWhenResponseObjectObservable(request);
-        Observable<WhyWhenResponseObject> preparedObservable = (Observable<WhyWhenResponseObject>) service.getPreparedObservable(unpreparedObservable, 9999);
+        Observable<YourResponseObject> unpreparedObservable = api.getDataFromPOSTRequest(request);
+        Observable<YourResponseObject> preparedObservable = (Observable<WhyWhenResponseObject>) service.getPreparedObservable(unpreparedObservable, 9999);
 
-        subscription = preparedObservable.subscribe(new Observer<WhyWhenResponseObject>() {
+        subscription = preparedObservable.subscribe(new Observer<YourResponseObject>() {
             @Override
             public void onCompleted() {
             }
@@ -48,13 +48,13 @@ public class YourActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onNext(WhyWhenResponseObject response) {
+            public void onNext(YourResponseObject response) {
                 handleResponse(response);
             }
         });
     }
 
-    private void handleResponse(WhyWhenResponseObject response) {
+    private void handleResponse(YourResponseObject response) {
         //i.e. display, process
     }
 
