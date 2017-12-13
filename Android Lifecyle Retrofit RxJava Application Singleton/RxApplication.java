@@ -2,6 +2,7 @@ package company.app.restpackagefolder;
 
 import android.app.Application;
 
+//this is application singleton that you have to initiate in manifest
 public class RxApplication extends Application {
     private NetworkService networkService;
 
