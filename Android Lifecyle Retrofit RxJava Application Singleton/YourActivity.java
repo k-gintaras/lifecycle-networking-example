@@ -35,7 +35,7 @@ public class YourActivity extends AppCompatActivity {
 
         //start networking
         Observable<YourResponseObject> unpreparedObservable = api.getDataFromPOSTRequest(request);
-        Observable<YourResponseObject> preparedObservable = (Observable<WhyWhenResponseObject>) service.getPreparedObservable(unpreparedObservable, 9999);
+        Observable<YourResponseObject> preparedObservable = (Observable<YourResponseObject>) service.getPreparedObservable(unpreparedObservable, 9999);
 
         subscription = preparedObservable.subscribe(new Observer<YourResponseObject>() {
             @Override
