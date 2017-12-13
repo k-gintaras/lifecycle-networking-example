@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="company.app"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+          
+<!--you will need internet-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+<!--android:name is where you initiate your application singletons-->
+    <application
+        android:name=".restpackagefolder.RxApplication" 
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
