@@ -8,5 +8,5 @@ import rx.Observable;
 public interface NetworkAPI {
     @FormUrlEncoded
     @POST("api_url.php")
-    Observable<ResponseObjectPOJO> getDataFromPOSTRequest(@Field("phpPostKey") String phpPostValue);
+    Observable<YourResponseObject> getDataFromPOSTRequest(@Field("phpPostKey") String phpPostValue);
 }
